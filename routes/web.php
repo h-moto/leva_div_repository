@@ -15,4 +15,5 @@ use App\Http\Controllers\PostController;  //外部にあるPostControllerクラ�
 */
 
 //Route::get('/posts', [PostController::class, 'index']); //postsをゲットする際に使用
-Route::get('/', [PostController::class, 'index']);
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/{post}', [PostController::class ,'show']);
