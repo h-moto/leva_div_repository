@@ -10,6 +10,9 @@
 	<body>
 		<h1>Blog Name</h1>
 		<div class='posts'>
+			<p>
+				login:{{ Auth::user()->name }}
+			</p>
 			@foreach ($posts as $post)
 				<div class='post'>
 					<p href="/posts/{{ $post->id }}"><h2 class='title'>{{ $post->title}}</p>
