@@ -29,11 +29,12 @@ class PostController extends Controller
         $questions = json_decode($response->getBody(), true);
         
         // index bladeに取得したデータを渡す
-        return view('index')->with([
+        return view('posts/index')->with([
             'posts' => $post->getPaginateByLimit(),
             'questions' => $questions['questions'],
         ]);
-    }
+        
+     }
 
     public function show(Post $post)
     {
